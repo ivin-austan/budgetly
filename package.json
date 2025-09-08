@@ -1,0 +1,17 @@
+{
+  "name": "my-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm --workspace=web run dev",
+    "start:server": "npm --workspace=server run dev",
+    "dev": "concurrently \"npm run dev:web\" \"npm run start:server\""
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
