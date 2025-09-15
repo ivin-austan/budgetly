@@ -1,7 +1,7 @@
 import pool from "../Config/db.js";
 import { Hashpassword } from "../Utils/Hashpassword.js";
 
-export const addUser = async ({ email, password }) => {
+export const addUser = async (email, password) => {
   const alreadyExists = await existing(email);
   if (alreadyExists.length > 0) {
     throw new Error("User already exists");

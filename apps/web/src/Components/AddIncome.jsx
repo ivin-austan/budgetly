@@ -1,5 +1,7 @@
+import Form from "./Form";
+
 const AddIncome = () => {
-  return <div>AddIncome</div>;
+  return <Form />;
 };
 
 export default AddIncome;

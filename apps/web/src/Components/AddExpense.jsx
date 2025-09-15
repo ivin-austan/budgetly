@@ -1,7 +1,7 @@
-import React from "react";
+import Form from "./Form";
 
 const AddExpense = () => {
-  return <div>AddExpense</div>;
+  return <Form type="expenses" />;
 };
 
 export default AddExpense;

@@ -6,16 +6,16 @@ import Transactions from "../Components/Transactions";
 const Home = () => {
   return (
     <div className="flex w-full gap-4 p-4">
-      <div className="flex w-1/4 items-center h-fit bg-red-200">
+      <div className="flex flex-1 items-center h-fit">
         <AddExpense />
       </div>
-      <div className="flex w-1/4 items-center h-fit bg-red-200">
+      <div className="flex flex-1 items-center h-fit">
         <Balance />
       </div>
-      <div className="flex w-1/4 items-center h-fit bg-red-200">
+      <div className="flex flex-1 items-center h-fit">
         <Transactions />
       </div>
-      <div className="flex w-1/4 items-center h-fit bg-red-200">
+      <div className="flex flex-1 items-center h-fit">
         <AddIncome />
       </div>
     </div>
