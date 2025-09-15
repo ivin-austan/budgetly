@@ -5,11 +5,11 @@ const Header = () => {
   return (
     <div>
       <div className="bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 ">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 ">
           <div className="flex items-center">
-            <span className="text-xl font-semibold text-gray-600">
+            <Link className="text-xl font-semibold text-gray-600" to="/">
               Budgetly
-            </span>
+            </Link>
           </div>
           <nav className="flex space-x-15">
             <Link

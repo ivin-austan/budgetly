@@ -6,7 +6,7 @@ const UserDropdown = () => {
   const [isopen, setIsopen] = useState(false);
 
   return (
-    <div>
+    <div className="relative">
       <button className="inline-flex items-center justify-center  w-8 h-8 rounded-md bg-gradient-to-tr  from-blue-200 to-yellow-200 text-blue-700  transition border border-blue-300 cursor-pointer">
         <BiSolidUser size={25} onClick={() => setIsopen((prev) => !prev)} />
       </button>

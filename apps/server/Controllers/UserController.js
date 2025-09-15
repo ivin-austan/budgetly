@@ -22,7 +22,7 @@ export const authUser = async (req, res) => {
   let user = hasAccount[0];
   try {
     if (hasAccount.length === 0) {
-      res.status(401).json("User not Registered!");
+      return res.status(401).json("User not Registered!");
     }
     const isMatch = await bcrypt.compare(value.password, user.password);
     if (!isMatch) {
