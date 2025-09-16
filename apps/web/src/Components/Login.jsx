@@ -6,11 +6,13 @@ import { useNavigate } from "@tanstack/react-router";
 import Toast from "./Toast";
 import { MdErrorOutline } from "react-icons/md";
 import { SiTicktick } from "react-icons/si";
+import useLoggedinUser from "../Store/loginStore";
 
 const Login = () => {
   const [errormessage, setErrormessage] = useState("");
   const [showtoast, setShowToast] = useState(false);
   const [newuser, setNewuser] = useState(false);
+  const loggedinUser = useLoggedinUser((state) => state.loginUser);
   const form = useForm({
     defaultValues: {
       email: "",
@@ -29,7 +31,9 @@ const Login = () => {
   const { mutate: loginMutation, isPending: isLoading } = useMutation({
     mutationFn: loginUser,
     onSuccess: (data) => {
-      localStorage.setItem("userInfo", JSON.stringify(data));
+      loggedinUser({
+        email: data.user.email,
+      });
       setErrormessage("");
       setShowToast(true);
       setTimeout(() => {
