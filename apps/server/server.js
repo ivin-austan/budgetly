@@ -1,7 +1,10 @@
 import express from "express";
 import userRoutes from "./Routes/UserRoutes.js";
+import ExpensesRoutes from "./Routes/ExpensesRoutes.js";
+import IncomeRoutes from "./Routes/IncomeRoutes.js";
+
 import dotenv from "dotenv";
-import cors from "cors"
+import cors from "cors";
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT;
@@ -23,6 +26,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use("/users", userRoutes);
+app.use("/expense", ExpensesRoutes);
+app.use("/income", IncomeRoutes);
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
